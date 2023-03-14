@@ -15,9 +15,11 @@ docker compose up -d mariadb mongo tracing
 ```
 
 ### Run the prisma migration
+
 #### User-api
 
 Set the .env :
+
 ```bash
 MYSQL_URL="mysql://root:passwd@localhost:3306/user"
 insecure=true
@@ -30,9 +32,11 @@ AUTH_API_URL="localhost:4003"
 ```bash
 npx prisma migrate dev
 ```
+
 #### Auth-api
 
 Set the .env :
+
 ```bash
 MYSQL_URL="mysql://root:passwd@localhost:3306/auth"
 PORT=4003
@@ -50,7 +54,9 @@ npx prisma migrate dev
 
 ## SSL
 
-### Install mkcert 
+### Install mkcert
+
+### Install mkcert
 
 https://github.com/FiloSottile/mkcert
 
@@ -64,7 +70,8 @@ mkcert front localhost
 cp $(mkcert -CAROOT)/rootCA.pem .
 ```
 
-Remove the +1 part of the name of the certificates 
+Remove the +1 part of the name of the certificates
+Remove the +1 part of the name of the certificates
 
 ## Front
 

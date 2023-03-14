@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   user-api:
-    image: mohammaddocker/tm-user-api
+    image: user-api
     environment:
       - MYSQL_URL=mysql://root:passwd@mariadb:3306/user
       - insecure=false
@@ -23,7 +23,7 @@ services:
       retries: 5
 
   task-api:
-    image: mohammaddocker/tm-task-api
+    image: task-api
     environment:
       - MONGO_URL=mongodb://root:task@mongo
       - insecure=false
@@ -44,7 +44,7 @@ services:
       retries: 5
 
   auth-api:
-    image: mohammaddocker/tm-auth-api
+    image: auth-api
     environment:
       - MYSQL_URL=mysql://root:passwd@mariadb:3306/auth
       - insecure=false
@@ -68,7 +68,7 @@ services:
       retries: 5
 
   front:
-    image: mohammaddocker/tm-front
+    image: front
     environment:
       - secure=true
       - FRONT_CERT=/certs/front.pem
