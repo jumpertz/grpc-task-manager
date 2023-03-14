@@ -66,7 +66,8 @@ https://github.com/FiloSottile/mkcert
 
 ```bash
 mkcert $API_DNS localhost
-cp $(mkcert -CAROOT)/rootCA.pem .
+cp /Users/jeremyjumpertz/Library/Application\ Support/mkcert/rootCA.pem .
+/Users/jeremyjumpertz/Library/Application \Support/mkcert
 ```
 
 Remove the +1 part of the name of the certificates
