@@ -58,19 +58,17 @@ npx prisma migrate dev
 
 ### Install mkcert
 
+### Install mkcert
+
 https://github.com/FiloSottile/mkcert
 
 ### Certificates and rootCA
 
 ```bash
-mkcert user-api localhost
-mkcert auth-api localhost
-mkcert task-api localhost
-mkcert front localhost
+mkcert $API_DNS localhost
 cp $(mkcert -CAROOT)/rootCA.pem .
 ```
 
-Remove the +1 part of the name of the certificates
 Remove the +1 part of the name of the certificates
 
 ## Front
@@ -85,10 +83,4 @@ secure=false
 TASK_API_URL=localhost:4001
 AUTH_API_URL=localhost:4002
 USER_API_URL=localhost:4000
-```
-
-## Start the servers
-
-```bash
-docker compose up -d
 ```
